@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
+import Text from './components/atoms/Text'
 
 import config from '@/payload.config'
 
@@ -14,5 +15,5 @@ export default async function HomePage() {
 
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
-  return <h1 className="bg-amber-300">HELLO WORLD</h1>
+  return <Text as="h2">Hello world</Text>
 }
