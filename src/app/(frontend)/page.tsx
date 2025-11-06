@@ -4,6 +4,7 @@ import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
 import Text from './components/atoms/Text'
+import TextWithHeadingBlock from './components/molecules/TextWithHeadingBlock'
 
 import config from '@/payload.config'
 
@@ -15,5 +16,14 @@ export default async function HomePage() {
 
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
-  return <Text as="h2">Hello world</Text>
+  return (
+    <>
+      <Text as="h1">DUPA JASIU</Text>
+      <TextWithHeadingBlock
+        as="p"
+        content="Technologie, z którymi pracuję to: JavaScript, TypeScript, React.js, Next.js, Astro.js, SASS/SCSS, Tailwind, Git, Wordpress, Prisma, Firebase, Figma, BEM. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js i Mongodb/Mongoose."
+        headingContent='technologie'
+      />
+    </>
+  )
 }

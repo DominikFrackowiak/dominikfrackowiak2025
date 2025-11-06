@@ -1,4 +1,5 @@
 import React from 'react'
+import { Open_Sans } from 'next/font/google'
 import './styles.css'
 
 export const metadata = {
@@ -6,11 +7,16 @@ export const metadata = {
   title: 'Payload Blank Template',
 }
 
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${openSans.variable}`}>
       <body>
         <main>{children}</main>
       </body>
