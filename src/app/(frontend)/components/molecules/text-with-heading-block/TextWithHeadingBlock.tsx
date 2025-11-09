@@ -1,5 +1,5 @@
 import React from 'react'
-import Text from '../atoms/Text'
+import Text from '../../atoms/text/Text'
 
 interface Props {
   headingContent: string
@@ -7,12 +7,18 @@ interface Props {
   content: string
   children?: React.ReactNode
 }
-export default function TextWithHeadingBlock({ as, children, content, headingContent, ...props }: Props) {
+export default function TextWithHeadingBlock({
+  as,
+  children,
+  content,
+  headingContent,
+  ...props
+}: Props) {
   return (
-    <div className="flex flex-col gap-4" {...props}>
+    <section className="flex flex-col gap-4" {...props}>
       {headingContent ? <Text as="h2" content={headingContent} /> : null}
       <Text as={as} content={content} />
       {children}
-    </div>
+    </section>
   )
 }

@@ -1,0 +1,22 @@
+<!-- Ładujemy Open Sans, bo Storybook nie uruchamia next/font -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  /* Podstawiamy wartość dla zmiennej używanej w Tailwind v4 */
+  :root {
+    --font-sans:
+      'Open Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu,
+      Cantarell, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  }
+
+  /* Jeśli w globals.css NIE ustawiasz fontu na html/body, to włącz poniższe: */
+  html,
+  body {
+    font-family: var(--font-sans);
+  }
+</style>
